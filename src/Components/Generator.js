@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import '../App.css';
 import Form from './Form';
 
 // access api, setState of input
@@ -14,7 +14,7 @@ const MemeGenerator = () => {
   // set full url
   const actualUrl =
     selection + '/' + topLineText + '/' + bottomLineText + '.jpg';
-  console.log(actualUrl);
+  // console.log(actualUrl);
 
   const onChangeSelect = (e) => {
     setSelection(e.target.value);
@@ -35,11 +35,7 @@ const MemeGenerator = () => {
   return (
     <div className="Generator">
       <label for="image-options">Select image</label>
-      <select
-        className="image-options"
-        onChange={onChangeSelect}
-        placeholder=""
-      >
+      <select className="image-options" onChange={onChangeSelect}>
         {urls.map(function mapping(url, i) {
           return (
             <option value={url.replace('/api/templates', '')}>
@@ -61,7 +57,8 @@ const MemeGenerator = () => {
       <img src={actualUrl} alt=""></img>
       <br />
 
-      <a href={actualUrl} target="_blank">
+      <a href={actualUrl} target="_blank" rel="noopener noreferrer">
+        <button className="open">Open Image in New tab</button>
         <button className="download">Download</button>
         <button className="share">Share</button>
       </a>

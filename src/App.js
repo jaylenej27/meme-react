@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Generator from './Generator';
-import { Header } from './Header';
+import Generator from './Components/Generator';
+import { Header } from './Components/Header';
 
 function App() {
   return (

@@ -12,7 +12,7 @@ export default function Form(props) {
   props.setTopLineText(inputText.topText);
   props.setBottomLineText(inputText.bottomText);
 
-  // display test while typing
+  // display text while typing
   const handleChangeTop = (e) => {
     const backupBottom = inputText.bottomText;
     setInputText({ topText: e.target.value, bottomText: backupBottom });
