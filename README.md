@@ -16,8 +16,8 @@ ecstatic-kirch-89e3e2.netlify.app
 
 ## Input screen
 
-<img src="./public/input-screen.png">
+<img src="./public/input-screen.png" />
 
 ## Meme example
 
-<img src="./public/meme-example.png">
+<img src="./public/meme-example.png" />
