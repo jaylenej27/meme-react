@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 // user input form
 
-export default function Form(props) {
+function Form(props) {
   const [inputText, setInputText] = useState({
     topText: '',
     bottomText: '',
@@ -59,3 +59,5 @@ export default function Form(props) {
     </div>
   );
 }
+
+export default Form;
