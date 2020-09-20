@@ -35,7 +35,7 @@ const MemeGenerator = () => {
   return (
     // display drop down selection
     <div className="Generator">
-      <label for="image-options">Select image</label>
+      <label>Select image</label>
       <select className="image-options" onChange={onChangeSelect}>
         {urls.map(function mapping(url, i) {
           return (
