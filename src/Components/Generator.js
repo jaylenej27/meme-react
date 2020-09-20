@@ -14,7 +14,7 @@ const MemeGenerator = () => {
   // set full url
   const actualUrl =
     selection + '/' + topLineText + '/' + bottomLineText + '.jpg';
-  console.log(actualUrl);
+  // console.log(actualUrl);
 
   const onChangeSelect = (e) => {
     setSelection(e.target.value);
