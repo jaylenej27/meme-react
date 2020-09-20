@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// input form
+// user input form
 
 export default function Form(props) {
   const [inputText, setInputText] = useState({
@@ -24,7 +24,9 @@ export default function Form(props) {
   };
 
   return (
-    <div>
+    //display the form
+    //top input line
+    <div className="form">
       <input
         className="input"
         type="input"
@@ -33,6 +35,9 @@ export default function Form(props) {
         onChange={handleChangeTop}
       />
       <br />
+
+      {/* bottom input line */}
+
       <input
         className="input"
         type="input"
@@ -41,6 +46,9 @@ export default function Form(props) {
         onChange={handleChangeBottom}
       />
       <br />
+
+      {/* button to apply url and words to meme and create inal image/link */}
+
       <button
         className="generate"
         type="button"

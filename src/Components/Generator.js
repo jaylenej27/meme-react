@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 import Form from './Form';
 
-// access api, setState of input
+// access api, setState of input & selection
 const MemeGenerator = () => {
   const [topLineText, setTopLineText] = useState('');
   const [bottomLineText, setBottomLineText] = useState('');
-  const [selection, setSelection] = useState('');
+  const [selection, setSelection] = useState('http://memegen.link/tenguy');
   const [urls, setUrls] = useState([]);
   const [imageName, setName] = useState([]);
   const onSubmit = () => {};
@@ -14,7 +14,7 @@ const MemeGenerator = () => {
   // set full url
   const actualUrl =
     selection + '/' + topLineText + '/' + bottomLineText + '.jpg';
-  // console.log(actualUrl);
+  console.log(actualUrl);
 
   const onChangeSelect = (e) => {
     setSelection(e.target.value);
@@ -33,6 +33,7 @@ const MemeGenerator = () => {
   }, []);
 
   return (
+    // display drop down selection
     <div className="Generator">
       <label for="image-options">Select image</label>
       <select className="image-options" onChange={onChangeSelect}>
@@ -45,6 +46,8 @@ const MemeGenerator = () => {
         })}
       </select>
 
+      {/* display form  */}
+
       <Form
         topLineText={topLineText}
         bottomLineText={bottomLineText}
@@ -54,14 +57,16 @@ const MemeGenerator = () => {
       />
       <br />
       <br />
-      <img src={actualUrl} alt=""></img>
+      <img src={actualUrl} alt="" />
       <br />
 
       <a href={actualUrl} target="_blank" rel="noopener noreferrer">
-        <button className="open">Open Image in New tab</button>
-        <button className="download">Download</button>
-        <button className="share">Share</button>
+        <button>Open Image in New tab</button>
       </a>
+
+      {/* <button className="download">
+          Download
+        </button> */}
 
       <br />
       <br />
