@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import MemeGenerator from './Components/Generator';
+import MemeGenerator from './Components/MemeGenerator';
 import { Header } from './Components/Header';
 
 function App() {
