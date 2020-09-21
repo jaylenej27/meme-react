@@ -73,4 +73,5 @@ const MemeGenerator = () => {
     </div>
   );
 };
+
 export default MemeGenerator;

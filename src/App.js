@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Generator from './Components/Generator';
+import MemeGenerator from './Components/Generator';
 import { Header } from './Components/Header';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         </Header>
       </div>
       <div>
-        <Generator />
+        <MemeGenerator />
       </div>
     </>
   );
