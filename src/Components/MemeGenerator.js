@@ -32,8 +32,8 @@ const MemeGenerator = () => {
       });
   }, []);
 
+  // display drop down selection
   return (
-    // display drop down selection
     <div className="Generator">
       <label>Select image</label>
       <select className="image-options" onChange={onChangeSelect}>
