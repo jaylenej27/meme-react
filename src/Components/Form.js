@@ -23,9 +23,9 @@ function Form(props) {
     setInputText({ bottomText: e.target.value, topText: backupTop });
   };
 
+  //display the form
+  //top input line
   return (
-    //display the form
-    //top input line
     <div className="form">
       <input
         className="input"
