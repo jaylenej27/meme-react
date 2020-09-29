@@ -4,7 +4,7 @@ import axios from 'axios';
 export default function DownloadButton(props) {
   function download() {
     axios({
-      url: props.memeURL,
+      url: props.actualUrl,
       method: 'GET',
       responseType: 'blob',
     }).then((response) => {
