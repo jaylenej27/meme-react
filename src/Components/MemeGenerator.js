@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import Form from './Form';
+import DownloadButton from './DLButton';
+
+const openTabButtonStyle = {
+  fontSize: '20px',
+  fontColor: 'black',
+  borderRadius: '8px',
+  backgroundColor: 'rgb(134, 166, 175)',
+  padding: '.5em',
+};
 
 // access api, setState of input & selection
 const MemeGenerator = () => {
@@ -61,12 +70,10 @@ const MemeGenerator = () => {
       <br />
 
       <a href={actualUrl} target="_blank" rel="noopener noreferrer">
-        <button>Open Image in New tab</button>
+        <button style={openTabButtonStyle}>Open Image in New tab</button>
       </a>
 
-      {/* <button className="download">
-          Download
-        </button> */}
+      <DownloadButton dlURL={actualUrl} />
 
       <br />
       <br />
