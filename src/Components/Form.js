@@ -47,15 +47,8 @@ function Form(props) {
       />
       <br />
 
-      {/* button to apply url and words to meme and create inal image/link */}
+      {/* button to apply url and words to meme and create initial image/link */}
 
-      <button
-        className="generate"
-        type="button"
-        onClick={() => props.onSubmit(props.topLineText, props.bottomLineText)}
-      >
-        Generate!
-      </button>
     </div>
   );
 }
