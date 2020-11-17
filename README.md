@@ -6,13 +6,9 @@ Opens image in new tab to download
 Created in Sept 2020 by Jenna Koelbl
 Using React Hooks, useState and useEffect
 
-## Code Sandbox
+## [Code Sandbox](codesandbox.io/s/github/jaylenej27/meme-react)
 
-codesandbox.io/s/github/jaylenej27/meme-react
-
-## Netlify
-
-ecstatic-kirch-89e3e2.netlify.app
+## [Netlify[](ecstatic-kirch-89e3e2.netlify.app)
 
 ## Input screen
 

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
-import Form from './Form';
 import DownloadButton from './DLButton';
 
 const openTabButtonStyle = {
@@ -23,20 +22,17 @@ const MemeGenerator = () => {
   // set full url
   const actualUrl =
     selection + '/' + topLineText + '/' + bottomLineText + '.jpg';
-  // console.log(actualUrl);
 
   const onChangeSelect = (e) => {
     setSelection(e.target.value);
   };
 
   const handleChangeTop = (e) => {
-    const backupBottom = topLineText;
-    setInputText({ topLineText: e.target.value, bottomLineText: backupBottom });
+    setTopLineText(e.target.value);
   };
 
   const handleChangeBottom = (e) => {
-    const backupTop = inputText.topText;
-    setInputText({ bottomLineText: e.target.value, topText: backupTop });
+    setBottomLineText(e.target.value);
   };
 
   //this fetch gets the Url list of images from website
@@ -76,6 +72,7 @@ const MemeGenerator = () => {
 
   // display drop down selection
   return (
+    <>
     <div className="Generator">
       <label>Select image</label>
       <select className="image-options" onChange={onChangeSelect}>
@@ -87,6 +84,7 @@ const MemeGenerator = () => {
           );
         })}
       </select>
+      </div>
 
       {/* display form  */}
 
@@ -95,7 +93,7 @@ const MemeGenerator = () => {
         className="input"
         type="input"
         placeholder="Top line text"
-        value={inputText.topText}
+        value={topLineText}
         onChange={handleChangeTop}
       />
       <br />
@@ -106,16 +104,11 @@ const MemeGenerator = () => {
         className="input"
         type="input"
         placeholder="Bottom line text"
-        value={inputText.bottomText}
+        value={bottomLineText}
         onChange={handleChangeBottom}
       />
 
-      <Form
-        topLineText={topLineText}
-        bottomLineText={bottomLineText}
-        setTopLineText={setTopLineText}
-        setBottomLineText={setBottomLineText}
-      />
+      
       <br />
       <br />
       <img src={actualUrl} alt="" />
@@ -131,6 +124,7 @@ const MemeGenerator = () => {
       <br />
       <br />
     </div>
+    </>
   );
 };
 
